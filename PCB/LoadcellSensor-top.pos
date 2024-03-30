@@ -1,0 +1,48 @@
+### Footprint positions - created on Sun Nov 19 15:04:49 2023 ###
+### Printed by KiCad version 7.0.9
+## Unit = mm, Angle = deg.
+## Side : top
+# Ref      Val                  Package                                           PosX       PosY       Rot  Side
+3VREG1     AP2112K-3.3          SOT-23-5                                       77.0000   -54.0000    0.0000  top
+ADC1       NAU7802SGI           SOI16_NAU7802SGI_NUV                           74.7820   -79.8170   90.0000  top
+BLT-CONN1  532610571            MOLEX_532610571                                85.6990   -87.8505    0.0000  top
+Boot1      PTS645SK50SMTR92LFS  SW_PTS645SK50SMTR92LFS                         96.0000   -78.0000    0.0000  top
+C1         0.1uF                C_0402_1005Metric_Pad0.74x0.62mm_HandSolder    76.5491   -85.2000   90.0000  top
+C2         0.1uF                C_0402_1005Metric_Pad0.74x0.62mm_HandSolder    70.2941   -85.1723   90.0000  top
+C3         1uF                  C_0805_2012Metric_Pad1.18x1.45mm_HandSolder    71.0018   -73.7290   90.0000  top
+C4         0.1uF                C_0402_1005Metric_Pad0.74x0.62mm_HandSolder    72.2068   -85.1872   90.0000  top
+C5         10uf                 C_0805_2012Metric_Pad1.18x1.45mm_HandSolder    72.0000   -53.0000    0.0000  top
+C6         10uf                 C_0805_2012Metric_Pad1.18x1.45mm_HandSolder    82.0000   -53.0000    0.0000  top
+C7         10uf                 C_0805_2012Metric_Pad1.18x1.45mm_HandSolder    86.8784   -82.0850    0.0000  top
+C8         100nF                C_0402_1005Metric_Pad0.74x0.62mm_HandSolder    63.4154   -60.8124   90.0000  top
+C9         12pF                 C_0402_1005Metric_Pad0.74x0.62mm_HandSolder    66.3494   -79.8170    0.0000  top
+C10        12pF                 C_0402_1005Metric_Pad0.74x0.62mm_HandSolder    63.5187   -79.7478    0.0000  top
+C11        100nF                C_0402_1005Metric_Pad0.74x0.62mm_HandSolder    67.0629   -60.6298   90.0000  top
+C12        100nF                C_0402_1005Metric_Pad0.74x0.62mm_HandSolder    68.0629   -60.6298   90.0000  top
+C13        100nF                C_0402_1005Metric_Pad0.74x0.62mm_HandSolder    69.0629   -60.6298   90.0000  top
+C14        100nF                C_0402_1005Metric_Pad0.74x0.62mm_HandSolder    70.0629   -60.6298   90.0000  top
+C15        100nF                C_0402_1005Metric_Pad0.74x0.62mm_HandSolder    71.0629   -60.6298   90.0000  top
+C16        100nF                C_0402_1005Metric_Pad0.74x0.62mm_HandSolder    72.0629   -60.6298   90.0000  top
+C17        100nF                C_0402_1005Metric_Pad0.74x0.62mm_HandSolder    73.0629   -60.6298   90.0000  top
+C18        1uF                  C_0805_2012Metric_Pad1.18x1.45mm_HandSolder    79.3320   -60.9322   90.0000  top
+C19        100nF                C_0402_1005Metric_Pad0.74x0.62mm_HandSolder    78.7921   -64.2610    0.0000  top
+C20        100nF                C_0402_1005Metric_Pad0.74x0.62mm_HandSolder    78.7921   -65.4468    0.0000  top
+C21        1uF                  C_0805_2012Metric_Pad1.18x1.45mm_HandSolder    77.2068   -60.9552   90.0000  top
+Crystal1   12Mhz                Crystal_SMD_5032-4Pin_5.0x3.2mm                65.0000   -77.0000    0.0000  top
+FLASH1     W25Q128JVS           SOIC-8_5.23x5.23mm_P1.27mm                     65.3253   -67.4766   90.0000  top
+LED1       WS2812B              LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm             87.0000   -78.0000    0.0000  top
+LOADCELL1  B4B-XH-A             JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical          96.0000   -70.0000   90.0000  top
+R1         2.2k                 R_0402_1005Metric_Pad0.72x0.64mm_HandSolder    73.0000   -73.5975   90.0000  top
+R2         2.2k                 R_0402_1005Metric_Pad0.72x0.64mm_HandSolder    74.0450   -73.5891   90.0000  top
+R3         47                   R_0402_1005Metric_Pad0.72x0.64mm_HandSolder    73.4074   -85.2030   90.0000  top
+R4         47                   R_0402_1005Metric_Pad0.72x0.64mm_HandSolder    74.6481   -85.1686   90.0000  top
+R5         27                   R_0402_1005Metric_Pad0.72x0.64mm_HandSolder    74.2178   -60.6570  -90.0000  top
+R6         27                   R_0402_1005Metric_Pad0.72x0.64mm_HandSolder    75.4032   -60.6909  -90.0000  top
+R7         10k                  R_0402_1005Metric_Pad0.72x0.64mm_HandSolder    78.7960   -66.8866    0.0000  top
+R8         1k                   R_0402_1005Metric_Pad0.72x0.64mm_HandSolder    79.5975   -74.0000    0.0000  top
+R9         1k                   R_0402_1005Metric_Pad0.72x0.64mm_HandSolder    65.5975   -74.0000    0.0000  top
+R10        10K                  R_0402_1005Metric_Pad0.72x0.64mm_HandSolder    75.0629   -73.6298   90.0000  top
+RP2040     RP2040               QFN-56-1EP_7x7mm_P0.4mm_EP3.2x3.2mm            72.8629   -67.4298    0.0000  top
+Reset1     PTS645SK50SMTR92LFS  SW_PTS645SK50SMTR92LFS                         87.0384   -70.4813    0.0000  top
+USB1       B4B-XH-A             JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical          87.0000   -62.0000   90.0000  top
+## End
