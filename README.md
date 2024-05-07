@@ -46,7 +46,7 @@ Alternatively, you can flash the [precompiled binary](https://github.com/jujojuj
 * Typically, set DELTA_FOR_TRIGGER to a low value like 1-2 and set `is_probing = true`
 * Reset your printer and as soon as it starts, the LED should be BLUE. Note that it might get triggers very easily and turn green since the threshold above is low.
 * Keep the filament wire into the extruder tight and try to extrude filament or move the printer head and keep bumping up DELTA_FOR_TRIGGER till such motions don't trigger.
-* Now the probe for probing motions
+* Now the probe will only trigger for probing motions
 
 ## Z-Probe Repeatability Test
 ![Z-Probe Repeatability Test](https://github.com/jujojujo2003/MGN12H-3DPrinter-LoadCell-BedLevelingSensor/blob/main/WikiAssets/zproberepeatability.png)
