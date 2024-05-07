@@ -1,5 +1,5 @@
 # MGN12H-3DPrinter-LoadCell-BedLevelingSensor
- This is a Load Cell based bed leveling sensor that should mountt onto any vertical MGN12H gantry
+ This is a Load Cell based bed leveling sensor that should mount onto any vertical MGN12H gantry
  It uses
  * [ADS1235 ADC](https://www.digikey.com/en/products/detail/texas-instruments/ADS1235QWRHMRQ1/11308865) due to its 24-bit ADC, 7.2k sampling rate, 128x PGA gain.
  * [RP2040 MCU](https://www.raspberrypi.com/products/rp2040/) to do all the processing
