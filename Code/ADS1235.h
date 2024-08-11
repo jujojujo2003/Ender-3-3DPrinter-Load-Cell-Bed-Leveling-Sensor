@@ -6,6 +6,8 @@
 #include <hardware/spi.h>
 #include "RunningAverage.h"
 
+#define SECONDS_IN_MICROS 1000000
+
 /**
  * This is the library to interface with the ADS1235 ADC . This is a singleton
  * class. Use ADS1235::createInstance() & ADS1235::getInstance() 
@@ -19,7 +21,6 @@ class ADS1235 {
   uint16_t numberOfSamplesPerSec = 0;
   unsigned long calibrationStartMicros = 0;
   RunningAverage *runningAverage = NULL;
-  long lastRawADCValue = 0;
 
   static ADS1235* singleton;
 
@@ -86,6 +87,8 @@ public:
   InputMux getNegativeInputMux();
   void setDataRate(DataRate rate);
   DataRate getDataRate();
+  int getDataRateAsInt();
+  int getRealDataRateAsInt();
   void setMode(ADCMode mode);
   ADCMode getMode();
   void caliberate();

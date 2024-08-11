@@ -71,14 +71,14 @@ void ADS1235::caliberate() {
   unsigned char data[2] = { 0 }, rx_buffer[2] = { 0 };
   data[0] = 0x19;
   this->exchangeData(data, rx_buffer, sizeof(data));
-  delay(100);
+  delay(500);
 
   // Measure number of samples we get in 1 sec in real time
   this->calibrationStartMicros = micros();
   this->numberOfSamplesPerSec = 0;
 
   // Wait for enough interrupts on handleDrdyChange
-  while((micros() - this->calibrationStartMicros) < 1000000);
+  while((micros() - this->calibrationStartMicros) < SECONDS_IN_MICROS);
 
   if (this->runningAverage != NULL) {
     delete this->runningAverage;
@@ -161,6 +161,45 @@ ADS1235::DataRate ADS1235::getDataRate() {
   return DataRate::INVALID_DR; 
 }
 
+int ADS1235::getDataRateAsInt() {
+  uint8_t reg = this->readRegister(Register::MODE0);
+  reg = (reg >> 3) & 0b00001111;
+  switch (reg) {
+    case DataRate::SPS_2:
+      return 2;
+    case DataRate::SPS_5:
+      return 5;
+    case DataRate::SPS_10:
+      return 10;
+    case DataRate::SPS_16:
+      return 16;
+    case DataRate::SPS_20:
+      return 20;
+    case DataRate::SPS_50:
+      return 50;
+    case DataRate::SPS_60:
+      return 60;
+    case DataRate::SPS_100:
+      return 100;
+    case DataRate::SPS_400:
+      return 400;
+    case DataRate::SPS_1200:
+      return 1200;
+    case DataRate::SPS_2400:
+      return 2400;
+    case DataRate::SPS_4800:
+      return 4800;
+    case DataRate::SPS_7200:
+      return 7200;
+  }
+
+  return -1; 
+}
+
+int ADS1235::getRealDataRateAsInt() {
+  return this->numberOfSamplesPerSec;
+}
+
 long ADS1235::readADCRaw() {
   unsigned char data[6] = { 0 }, rx_buffer[6] = { 0 };
   data[0] = 0x12;
@@ -188,7 +227,7 @@ void ADS1235::createInstance(SPIClass& spi_, SPISettings& spi_settings, uint8_t 
 }
 
 void ADS1235::maybeUpdateNumberOfSamplesPerSec() {
-  if ((micros() - this->calibrationStartMicros) < 1000000) {
+  if ((micros() - this->calibrationStartMicros) < SECONDS_IN_MICROS) {
     this->numberOfSamplesPerSec++;
   }
 }
@@ -197,19 +236,10 @@ RunningAverage* ADS1235::getRunningAverage() {
   return this->runningAverage;
 }
 
-long ADS1235::getLastADCValue() {
-  return this->lastRawADCValue;
-}
-
-void ADS1235::setLastADCValue(long val) {
-  this->lastRawADCValue = val;
-}
-
 void ADS1235::handleDrdyChange() {
   ADS1235::getInstance()->maybeUpdateNumberOfSamplesPerSec();
   if (ADS1235::getInstance()->getRunningAverage() != NULL) {
     long val = ADS1235::getInstance()->readADCRaw();
-    ADS1235::getInstance()->setLastADCValue(val);
     ADS1235::getInstance()->getRunningAverage()->addValue(val);
   }
 }
